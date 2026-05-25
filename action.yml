@@ -30,13 +30,13 @@ runs:
   using: "composite"
   steps:
     - name: "Log in to Docker Hub"
-      uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446
+      uses: docker/login-action@650006c6eb7dba73a995cc03b0b2d7f5ca915bee
       with:
         username: ${{ inputs.docker-username }}
         password: ${{ inputs.docker-password }}
 
     - name: "Log in to the Container registry"
-      uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446
+      uses: docker/login-action@650006c6eb7dba73a995cc03b0b2d7f5ca915bee
       with:
         registry: ghcr.io
         username: ${{ inputs.github-actor }}
